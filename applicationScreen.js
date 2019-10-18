@@ -28,7 +28,10 @@ import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { oauth, net } from "react-native-force";
 import { Card } from "react-native-material-ui";
+import { Divider } from "react-native-material-ui";
+import { Icon } from "react-native-material-ui";
 
+const applicationName = ["Home Loan", "Personal Loan", "Boat Loan"];
 class ApplicationListScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -63,11 +66,15 @@ class ApplicationListScreen extends React.Component {
         <View style={styles.container}>
           <FlatList
             data={this.state.data}
-            renderItem={({ item }) => (
-              <Card onPress={() => this.props.handleAppDetail()}>
+            renderItem={({ item }, i) => (
+              <Card
+                styles={{ card: { backgroundColor: "red" } }}
+                onPress={e => this.props.handleAppDetail(item.id, e)}
+              >
                 <Text style={styles.item}>{item.Name}</Text>
+                <Divider />
                 <Text style={styles.item}>{item.genesis__Status__c}</Text>
-                <Text style={styles.item}>{item.genesis__Loan_Amount__c}</Text>
+                <Text style={styles.item}>${item.genesis__Loan_Amount__c}</Text>
               </Card>
             )}
             keyExtractor={(item, index) => "key_" + index}
@@ -88,6 +95,9 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     height: 44
+  },
+  cardStyle: {
+    backgroundColor: "#6CFF33"
   }
 });
 

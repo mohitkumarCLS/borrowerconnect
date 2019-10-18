@@ -45,12 +45,15 @@ import { Toolbar } from "react-native-material-ui";
 import { createMaterialTopTabNavigator } from "react-navigation-tabs";
 import { oauth, net } from "react-native-force";
 import ApplicationScreen from "./applicationScreen";
+import ApplicationDetailScreen from "./applicationDetailScreen";
+import { Icon } from "react-native-material-ui";
 
 class ContactListScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: [] };
     this.state = { active: "home" };
+    this.state = { selectedApp: "" };
   }
 
   componentDidMount() {
@@ -75,10 +78,22 @@ class ContactListScreen extends React.Component {
 
   displayComponent() {
     if (this.state.active === "home") {
-      return <ApplicationScreen />;
+      return (
+        <ApplicationScreen
+          handleAppDetail={this.displayApplicationDetail.bind(this)}
+        />
+      );
+    } else if (this.state.active === "detail") {
+      return <ApplicationDetailScreen appId={this.state.selectedApp} />;
     } else {
-      return <Text> Goodbye, JSX! </Text>;
+      return <Text> Welcome! </Text>;
     }
+  }
+
+  displayApplicationDetail(item, e) {
+    var that = this;
+    that.setState({ active: "detail" });
+    that.setState({ selectedApp: item });
   }
 
   render() {

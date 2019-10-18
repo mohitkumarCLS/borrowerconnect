@@ -28,12 +28,54 @@ import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { oauth, net } from "react-native-force";
 import { Card } from "react-native-material-ui";
+import StepIndicator from "react-native-step-indicator";
 
-class ApplicationListScreen extends React.Component {
+const labels = ["NEW APPLICATION", "QUALIFICATION", "VERIFICATION", "CLOSING"];
+
+const message = [
+  "At a first stage of the loan application process, your loan application has been successfully created. Our loan officers are working on your application and will get in touch with you on the next steps",
+  "This stage lets you know whether your application qualifies for further process or not. If it qualifies then loan officers will get back to you on next steps",
+  "This stage is when your lender verifies that all of your information in the application is correct. You may be asked to provide additional documnets. You may want to go to the TO-DO page to sign documents."
+];
+
+const statusMessage = [
+  "Stage 1 was completed on June 18, 2019",
+  "Stage 2 will be completed by June 28, 2019",
+  "Stage 3 will be complete by July 10, 2019"
+];
+
+const customStyles = {
+  stepIndicatorSize: 25,
+  currentStepIndicatorSize: 30,
+  separatorStrokeWidth: 2,
+  currentStepStrokeWidth: 3,
+  stepStrokeCurrentColor: "#fe7013",
+  stepStrokeWidth: 3,
+  stepStrokeFinishedColor: "#fe7013",
+  stepStrokeUnFinishedColor: "#aaaaaa",
+  separatorFinishedColor: "#fe7013",
+  separatorUnFinishedColor: "#aaaaaa",
+  stepIndicatorFinishedColor: "#fe7013",
+  stepIndicatorUnFinishedColor: "#ffffff",
+  stepIndicatorCurrentColor: "#ffffff",
+  stepIndicatorLabelFontSize: 13,
+  currentStepIndicatorLabelFontSize: 13,
+  stepIndicatorLabelCurrentColor: "#fe7013",
+  stepIndicatorLabelFinishedColor: "#ffffff",
+  stepIndicatorLabelUnFinishedColor: "#aaaaaa",
+  labelColor: "#999999",
+  labelSize: 13,
+  currentStepLabelColor: "#fe7013"
+};
+
+class ApplicationDetailScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: [] };
     this.state = { active: "home" };
+    this.state = {
+      currentPosition: 1
+    };
   }
 
   componentDidMount() {
@@ -52,7 +94,7 @@ class ApplicationListScreen extends React.Component {
   fetchData() {
     var that = this;
     net.query(
-      "SELECT Id, Name, genesis__Status__c,genesis__Loan_Amount__c FROM genesis__Applications__C LIMIT 3",
+      "select id, genesis__Overall_Status__c , Name from genesis__applications__c where id ='a5Y3k0000004BuHEAU' LIMIT 1",
       response => that.setState({ data: response.records })
     );
   }
@@ -60,52 +102,29 @@ class ApplicationListScreen extends React.Component {
   render() {
     return (
       <>
-        <Toolbar
-          leftElement="menu"
-          centerElement="Texas First Bank"
-          searchable={{
-            autoFocus: true,
-            placeholder: "Search"
-          }}
-          rightElement={{
-            menu: {
-              icon: "more-vert",
-              labels: ["LogIn", "LogOut"]
-            }
-          }}
-          onRightElementPress={label => {
-            console.log(label);
-          }}
-        />
         <View style={styles.container}>
-          <Text>Inside Details </Text>
+          <FlatList
+            data={this.state.data}
+            renderItem={({ item }) => (
+              <Card>
+                <Text style={styles.item}>{item.Name}</Text>
+                <StepIndicator
+                  customStyles={customStyles}
+                  currentPosition={this.state.currentPosition}
+                  labels={labels}
+                  stepCount="4"
+                />
+                <Text style={styles.item}>
+                  {message[this.state.currentPosition]}
+                </Text>
+                <Text style={styles.status}>
+                  {statusMessage[this.state.currentPosition]}
+                </Text>
+              </Card>
+            )}
+            keyExtractor={(item, index) => "key_" + index}
+          />
         </View>
-        <BottomNavigation active={this.state.active}>
-          <BottomNavigation.Action
-            key="home"
-            icon="home"
-            label="Home"
-            onPress={() => this.setState({ active: "home" })}
-          />
-          <BottomNavigation.Action
-            key="person"
-            icon="person"
-            label="Profile"
-            onPress={() => this.setState({ active: "person" })}
-          />
-          <BottomNavigation.Action
-            key="bookmark-border"
-            icon="bookmark-border"
-            label="Bookmark"
-            onPress={() => this.setState({ active: "bookmark-border" })}
-          />
-          <BottomNavigation.Action
-            key="settings"
-            icon="settings"
-            label="Settings"
-            onPress={() => this.setState({ active: "settings" })}
-          />
-        </BottomNavigation>
       </>
     );
   }
@@ -119,8 +138,13 @@ const styles = StyleSheet.create({
   },
   item: {
     padding: 10,
-    fontSize: 18,
-    height: 44
+    fontSize: 18
+  },
+
+  status: {
+    padding: 10,
+    fontSize: 14,
+    color: "green"
   }
 });
 
