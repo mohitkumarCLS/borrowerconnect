@@ -1,0 +1,420 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.borrowe.android"
+4    android:installLocation="internalOnly"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+9-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="28" />
+10-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml
+11
+12    <!--
+13        GCM permission to ensure that only this application can
+14        receive the messages and registration result. This must be of
+15        the format <app-package-name>.C2D_MESSAGE for it to work.
+16    -->
+17    <permission
+17-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:96:5-97:47
+18        android:name="com.borrowe.android.C2D_MESSAGE"
+18-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:96:17-63
+19        android:protectionLevel="signature" />
+19-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:97:9-44
+20
+21    <uses-permission android:name="com.borrowe.android.C2D_MESSAGE" />
+21-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:99:5-71
+21-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:99:22-68
+22    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+22-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:100:5-77
+22-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:100:22-75
+23    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+23-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-80
+23-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-77
+24    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+24-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-71
+24-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-68
+25    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+25-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-74
+25-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-71
+26    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+26-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-74
+26-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:22-71
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-81
+27-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-78
+28    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> <!-- USE_FINGERPRINT is available from API 23 to API 27 and should be removed once minAPI > 27 -->
+28-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-88
+28-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:22-85
+29    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- USE_BIOMETRIC is available on API 28 and higher -->
+29-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:5-74
+29-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:22-71
+30    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+30-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:5-72
+30-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:22-69
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:22:5-79
+31-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:22:22-76
+32    <uses-permission android:name="android.permission.INTERNET" />
+32-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:23:5-67
+32-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:23:22-64
+33    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+33-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:24:5-68
+33-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:24:22-65
+34    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+34-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:26:5-82
+34-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:26:22-79
+35
+36    <application
+36-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:9:2-89:16
+37        android:name="com.borrowe.android.MainApplication"
+37-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:11:3-34
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.0.2] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\c3720511db6097b00afe15ea1305cd72\core-1.0.2\AndroidManifest.xml:22:18-86
+39        android:debuggable="true"
+40        android:icon="@drawable/sf__icon"
+40-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:9:15-48
+41        android:label="@string/app_name"
+41-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:10:6-38
+42        android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity"
+42-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:12:3-81
+43        android:testOnly="true"
+44        android:usesCleartextTraffic="true" >
+44-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:13:3-38
+45
+46        <!-- Launcher screen -->
+47        <activity
+47-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:16:3-23:14
+48            android:name="com.borrowe.android.MainActivity"
+48-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:16:13-41
+49            android:label="@string/app_name"
+49-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:17:7-39
+50            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+50-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:18:4-60
+51            <intent-filter>
+51-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:19:4-22:20
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:20:5-57
+52-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:20:13-54
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:21:5-65
+54-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:21:15-62
+55            </intent-filter>
+56        </activity>
+57
+58        <!-- Login activity -->
+59        <!--
+60            Launch mode of "singleInstance" ensures that the activity isn't restarted
+61            by a callback from Chrome custom tab when auth flow is complete. This is
+62            required for the Chrome custom tab auth flow to work correctly.
+63        -->
+64        <!--
+65            To enable browser based authentication, uncomment the lines below and replace
+66            'scheme', 'host' and 'path' with their corresponding values from your connected app.
+67
+68            For example, if the callback URL of your connected app is
+69            "testsfdc:///mobilesdk/detect/oauth/done",
+70            'scheme' would be "testsfdc", 'host' would be "*" since it doesn't exist, and
+71            'path' would be "/mobilesdk/detect/oauth/done".
+72
+73            If the callback URL is "sfdc://login.salesforce.com/oauth/done",
+74            'scheme' would be "sfdc", 'host' would be "login.salesforce.com",
+75            and 'path' would be "/oauth/done".
+76        -->
+77        <!--
+78        <activity android:name="com.salesforce.androidsdk.ui.LoginActivity"
+79            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+80            android:launchMode="singleInstance">
+81
+82            <intent-filter>
+83                <data android:scheme="testsfdc"
+84                    android:host="*"
+85                    android:path="/mobilesdk/detect/oauth/done" />
+86                <action android:name="android.intent.action.VIEW" />
+87                <category android:name="android.intent.category.BROWSABLE" />
+88                <category android:name="android.intent.category.DEFAULT" />
+89            </intent-filter>
+90        </activity>
+91        -->
+92
+93
+94        <!-- IDP account picker activity -->
+95        <!--
+96            To enable this app as an IDP app that's capable of handling authentication
+97            requests originating from other SP apps, uncomment the lines below and replace
+98            'scheme' and 'host' with the values you wish to use to define your IDP app.
+99            The URI constructed from this must be unique and will be set in the SP app
+100            as well. This will be used to launch the IDP app from the SP app.
+101
+102            In the example given below, 'scheme' is "com.borrowe.android" and
+103            'host' is "authenticator". The full URI that needs to be set on the SP app would be
+104            "com.borrowe.android://authenticator".
+105        -->
+106        <!--
+107        <activity android:name="com.salesforce.androidsdk.auth.idp.IDPAccountPickerActivity"
+108            android:excludeFromRecents="true"
+109            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+110
+111
+112            <intent-filter>
+113                <data android:scheme="com.borrowe.android"
+114                    android:host="authenticator" />
+115                <action android:name="android.intent.action.VIEW" />
+116                <category android:name="android.intent.category.BROWSABLE" />
+117                <category android:name="android.intent.category.DEFAULT" />
+118            </intent-filter>
+119        </activity>
+120        -->
+121
+122        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+122-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:88:9-86
+122-->C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\android\app\src\main\AndroidManifest.xml:88:19-83
+123        <!-- SmartStore Inspector screen -->
+124        <activity
+124-->[:libs:SmartStore] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SmartStore\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-17:67
+125            android:name="com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity"
+125-->[:libs:SmartStore] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SmartStore\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-95
+126            android:exported="false"
+126-->[:libs:SmartStore] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SmartStore\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-37
+127            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Metadata for supported app restrictions -->
+127-->[:libs:SmartStore] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SmartStore\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-64
+128        <meta-data
+128-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-29:56
+129            android:name="android.content.APP_RESTRICTIONS"
+129-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-60
+130            android:resource="@xml/app_restrictions" /> <!-- Service required for authentication -->
+130-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-53
+131        <service
+131-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:9-42:19
+132            android:name="com.salesforce.androidsdk.auth.AuthenticatorService"
+132-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-79
+133            android:exported="true" >
+133-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-36
+134            <intent-filter>
+134-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-37:29
+135                <action android:name="android.accounts.AccountAuthenticator" />
+135-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-80
+135-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:25-77
+136            </intent-filter>
+137
+138            <meta-data
+138-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-41:57
+139                android:name="android.accounts.AccountAuthenticator"
+139-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:17-69
+140                android:resource="@xml/authenticator" />
+140-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:17-54
+141        </service> <!-- Login activity -->
+142        <!--
+143            Launch mode of "singleInstance" ensures that the activity isn't restarted
+144            by a callback from Chrome custom tab when auth flow is complete. This is
+145            required for the Chrome custom tab auth flow to work correctly.
+146        -->
+147        <activity
+147-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:9-54:67
+148            android:name="com.salesforce.androidsdk.ui.LoginActivity"
+148-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:13-70
+149            android:launchMode="singleInstance"
+149-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:52:13-48
+150            android:screenOrientation="portrait"
+150-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:53:13-49
+151            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Passcode activity -->
+151-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:54:13-64
+152        <activity
+152-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:57:9-62:77
+153            android:name="com.salesforce.androidsdk.ui.PasscodeActivity"
+153-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:58:13-73
+154            android:exported="false"
+154-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:59:13-37
+155            android:screenOrientation="portrait"
+155-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:60:13-49
+156            android:theme="@style/Theme.Design.NoActionBar"
+156-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:13-60
+157            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" /> <!-- Manage space activity -->
+157-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:62:13-74
+158        <activity
+158-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:65:9-68:67
+159            android:name="com.salesforce.androidsdk.ui.ManageSpaceActivity"
+159-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:66:13-76
+160            android:excludeFromRecents="true"
+160-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:67:13-46
+161            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Choose server activity -->
+161-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:68:13-64
+162        <activity
+162-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:71:9-75:67
+163            android:name="com.salesforce.androidsdk.ui.ServerPickerActivity"
+163-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:72:13-77
+164            android:excludeFromRecents="true"
+164-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:73:13-46
+165            android:screenOrientation="portrait"
+165-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:74:13-49
+166            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Account switcher activity -->
+166-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:75:13-64
+167        <activity
+167-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:78:9-82:67
+168            android:name="com.salesforce.androidsdk.ui.AccountSwitcherActivity"
+168-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:79:13-80
+169            android:excludeFromRecents="true"
+169-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:80:13-46
+170            android:screenOrientation="portrait"
+170-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:81:13-49
+171            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- IDP webview activity -->
+171-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:82:13-64
+172        <activity
+172-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:85:9-90:67
+173            android:name="com.salesforce.androidsdk.auth.idp.IDPCodeGeneratorActivity"
+173-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:86:13-87
+174            android:excludeFromRecents="true"
+174-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:87:13-46
+175            android:exported="false"
+175-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:88:13-37
+176            android:screenOrientation="portrait"
+176-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:89:13-49
+177            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Dev info activity -->
+177-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:90:13-64
+178        <activity
+178-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:93:9-96:67
+179            android:name="com.salesforce.androidsdk.ui.DevInfoActivity"
+179-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:94:13-72
+180            android:exported="false"
+180-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:95:13-37
+181            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Receiver for IDP initiated login flow -->
+181-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:96:13-64
+182        <receiver
+182-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:99:9-107:20
+183            android:name="com.salesforce.androidsdk.auth.idp.IDPInititatedLoginReceiver"
+183-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:100:13-89
+184            android:exported="true" >
+184-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:101:13-36
+185            <intent-filter>
+185-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:102:13-106:29
+186                <action android:name="com.salesforce.IDP_LOGIN_REQUEST" />
+186-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:103:17-75
+186-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:103:25-72
+187
+188                <category android:name="android.intent.category.DEFAULT" />
+188-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:105:17-76
+188-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:105:27-73
+189            </intent-filter>
+190        </receiver>
+191
+192        <service android:name="com.salesforce.androidsdk.push.SFDCFcmListenerService" >
+192-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:109:9-113:19
+192-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:109:18-86
+193            <intent-filter>
+193-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:110:13-112:29
+194                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+194-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:111:17-78
+194-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:111:25-75
+195            </intent-filter>
+196        </service>
+197        <service
+197-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:114:9-118:19
+198            android:name="com.salesforce.androidsdk.push.SFDCRegistrationIntentService"
+198-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:115:13-88
+199            android:exported="false"
+199-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:116:13-37
+200            android:permission="android.permission.BIND_JOB_SERVICE" >
+200-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:117:13-69
+201        </service>
+202
+203        <receiver
+203-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:120:9-122:40
+204            android:name="com.salesforce.androidsdk.push.PushService$SFDCRegistrationRetryAlarmReceiver"
+204-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:121:13-105
+205            android:exported="false" />
+205-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:122:13-37
+206
+207        <service
+207-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:124:9-127:72
+208            android:name="com.salesforce.androidsdk.push.PushService"
+208-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:125:13-70
+209            android:exported="false"
+209-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:126:13-37
+210            android:permission="android.permission.BIND_JOB_SERVICE" />
+210-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:127:13-69
+211        <service
+211-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:128:9-131:72
+212            android:name="com.salesforce.androidsdk.analytics.AnalyticsPublisherService"
+212-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:129:13-89
+213            android:exported="false"
+213-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:130:13-37
+214            android:permission="android.permission.BIND_JOB_SERVICE" />
+214-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:131:13-69
+215        <!--
+216             FirebaseMessagingService performs security checks at runtime,
+217             but set to not exported to explicitly avoid allowing another app to call it.
+218        -->
+219        <service
+219-->[com.google.firebase:firebase-messaging:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\8fa5dd38a6dc608a312121c843b159ed\jetified-firebase-messaging-19.0.1\AndroidManifest.xml:28:9-34:19
+220            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+220-->[com.google.firebase:firebase-messaging:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\8fa5dd38a6dc608a312121c843b159ed\jetified-firebase-messaging-19.0.1\AndroidManifest.xml:29:13-82
+221            android:exported="false" >
+221-->[com.google.firebase:firebase-messaging:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\8fa5dd38a6dc608a312121c843b159ed\jetified-firebase-messaging-19.0.1\AndroidManifest.xml:30:13-37
+222            <intent-filter android:priority="-500" >
+222-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:110:13-112:29
+223                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+223-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:111:17-78
+223-->[:libs:SalesforceSDK] C:\Users\mkumar\AndroidStudioProjects\borrowerconnect\mobile_sdk\SalesforceMobileSDK-Android\libs\SalesforceSDK\build\intermediates\library_manifest\debug\AndroidManifest.xml:111:25-75
+224            </intent-filter>
+225        </service>
+226        <service
+226-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:29:9-35:19
+227            android:name="com.google.firebase.components.ComponentDiscoveryService"
+227-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:30:13-84
+228            android:exported="false" >
+228-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:31:13-37
+229            <meta-data
+229-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:32:13-34:85
+230                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+230-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:33:17-96
+231                android:value="com.google.firebase.components.ComponentRegistrar" />
+231-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:34:17-82
+232        </service>
+233
+234        <receiver
+234-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:37:9-44:20
+235            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+235-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:38:13-78
+236            android:exported="true"
+236-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:39:13-36
+237            android:permission="com.google.android.c2dm.permission.SEND" >
+237-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:40:13-73
+238            <intent-filter>
+238-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:41:13-43:29
+239                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+239-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:42:17-81
+239-->[com.google.firebase:firebase-iid:19.0.1] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\76ca78a0ec5ef1171d0c7567943db73a\firebase-iid-19.0.1\AndroidManifest.xml:42:25-78
+240            </intent-filter>
+241        </receiver>
+242
+243        <provider
+243-->[com.google.firebase:firebase-common:18.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\2f0ecd1310f46f1073b1ab2007f6c2c8\firebase-common-18.0.0\AndroidManifest.xml:12:9-16:39
+244            android:name="com.google.firebase.provider.FirebaseInitProvider"
+244-->[com.google.firebase:firebase-common:18.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\2f0ecd1310f46f1073b1ab2007f6c2c8\firebase-common-18.0.0\AndroidManifest.xml:13:13-77
+245            android:authorities="com.borrowe.android.firebaseinitprovider"
+245-->[com.google.firebase:firebase-common:18.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\2f0ecd1310f46f1073b1ab2007f6c2c8\firebase-common-18.0.0\AndroidManifest.xml:14:13-72
+246            android:exported="false"
+246-->[com.google.firebase:firebase-common:18.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\2f0ecd1310f46f1073b1ab2007f6c2c8\firebase-common-18.0.0\AndroidManifest.xml:15:13-37
+247            android:initOrder="100" />
+247-->[com.google.firebase:firebase-common:18.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\2f0ecd1310f46f1073b1ab2007f6c2c8\firebase-common-18.0.0\AndroidManifest.xml:16:13-36
+248
+249        <activity
+249-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+250            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+250-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+251            android:exported="false"
+251-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+252            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+252-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+253
+254        <meta-data
+254-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\216191bbe563be32d99935582b3caa21\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+255            android:name="com.google.android.gms.version"
+255-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\216191bbe563be32d99935582b3caa21\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+256            android:value="@integer/google_play_services_version" />
+256-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mkumar\.gradle\caches\transforms-2\files-2.1\216191bbe563be32d99935582b3caa21\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+257    </application>
+258
+259</manifest>

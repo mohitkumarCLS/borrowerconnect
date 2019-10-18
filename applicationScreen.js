@@ -27,6 +27,7 @@
 import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { oauth, net } from "react-native-force";
+import { Card } from "react-native-material-ui";
 
 class ApplicationListScreen extends React.Component {
   constructor(props) {
@@ -50,8 +51,9 @@ class ApplicationListScreen extends React.Component {
 
   fetchData() {
     var that = this;
-    net.query("SELECT Id, Name FROM Contact LIMIT 10", response =>
-      that.setState({ data: response.records })
+    net.query(
+      "select id, genesis__Account__r.name, name, genesis__Status__c,genesis__Loan_Amount__c from genesis__applications__c where genesis__Account__c= '0013k00002cIiAUAA0'",
+      response => that.setState({ data: response.records })
     );
   }
 
@@ -62,7 +64,11 @@ class ApplicationListScreen extends React.Component {
           <FlatList
             data={this.state.data}
             renderItem={({ item }) => (
-              <Text style={styles.item}>{item.Name}</Text>
+              <Card onPress={() => this.props.handleAppDetail()}>
+                <Text style={styles.item}>{item.Name}</Text>
+                <Text style={styles.item}>{item.genesis__Status__c}</Text>
+                <Text style={styles.item}>{item.genesis__Loan_Amount__c}</Text>
+              </Card>
             )}
             keyExtractor={(item, index) => "key_" + index}
           />
