@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="remoteAccessConsumerKey">3MVG9U8EiIaioPUab9YwbLxFysHcARzzgSxozTewJQllfX8u8RMZqwIs3V_xUhe1h7.Z5SlT_Bz36MPX4i0_P</string>
+    <string name="oauthRedirectURI">borrowerconnect://auth/success</string>
+    <string-array name="oauthScopes">
+        <item>api</item>
+		<item>web</item>
+    </string-array>
+    <string name="androidPushNotificationClientId"></string>
+</resources>

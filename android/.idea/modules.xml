@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceAnalytics/SalesforceAnalytics.iml" filepath="$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceAnalytics/SalesforceAnalytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceReact/SalesforceReact.iml" filepath="$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceReact/SalesforceReact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceSDK/SalesforceSDK.iml" filepath="$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceSDK/SalesforceSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SmartStore/SmartStore.iml" filepath="$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SmartStore/SmartStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SmartSync/SmartSync.iml" filepath="$PROJECT_DIR$/../mobile_sdk/SalesforceMobileSDK-Android/libs/SmartSync/SmartSync.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/borrowerconnect.iml" filepath="$PROJECT_DIR$/borrowerconnect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-vector-icons/android/react-native-vector-icons.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-vector-icons/android/react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>
