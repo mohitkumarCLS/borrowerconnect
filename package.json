@@ -11,7 +11,7 @@
     "SalesforceMobileSDK-iOS": "https://github.com/forcedotcom/SalesforceMobileSDK-iOS.git#v7.3.0"
   },
   "dependencies": {
-    "acorn": "^6.0.0",
+    "acorn": "^6.4.1",
     "eslint": "^5.0.0",
     "react": "16.8.6",
     "react-native": "0.60.5",
